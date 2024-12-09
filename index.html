@@ -5,25 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dutch Mortgage Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
+        <button class="menu-button"><i class="fas fa-bars"></i></button>
         <h1>Dutch Mortgage Calculator</h1>
+        <a href="https://github.com" class="github-link"><i class="fab fa-github"></i></a>
     </header>
-    <main>
-        <div class="calculator">
-            <div class="input-group">
-                <label for="gross-income">Gross income</label>
-                <input type="number" id="gross-income" name="gross-income">
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="options-section">
+                <h2>Options</h2>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Holiday allowance included</label>
+                    <label><input type="checkbox"> 66 years & older</label>
+                    <label><input type="checkbox"> 30% ruling</label>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="period">Period</label>
-                <select id="period">
-                    <option value="year">Year</option>
-                    <option value="month">Month</option>
-                </select>
+
+            <div class="options-section">
+                <label>Week hours</label>
+                <input type="number" value="40" class="form-input">
             </div>
-        </div>
-    </main>
+
+            <div class="extra-options">
+                <h2>Extra Options</h2>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Year Gross Income</label>
+                    <label><input type="checkbox"> Month Gross Income</label>
+                    <label><input type="checkbox"> Week Gross Income</label>
+                    <label><input type="checkbox"> Day Gross Income</label>
+                    <label><input type="checkbox"> Hour Gross Income</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="calculator-card">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Gross income</label>
+                        <input type="number" value="60000" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <label>Period</label>
+                        <select class="form-select">
+                            <option>Year</option>
+                            <option>Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calculations">
+                    <h2>Calculations for 2024</h2>
+                    
+                    <div class="result-row">
+                        <span>Taxable Income</span>
+                        <span class="amount">€60,000.00</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Payroll Tax</span>
+                        <span class="amount negative">-€11,648.18</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Social Security Tax</span>
+                        <span class="amount negative">-€10,533.82</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span>General Tax Credit</span>
+                        <span class="amount">€1,029.10</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span>Labour Tax Credit</span>
+                        <span class="amount">€4,227.29</span>
+                    </div>
+
+                    <div class="result-row highlight">
+                        <span>Month Net Income</span>
+                        <span class="amount">€3,589.53</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
