@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dutch Mortgage Calculator</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -14,7 +13,7 @@
         <div class="calculator">
             <div class="input-group">
                 <label for="gross-income">Gross income</label>
-                <input type="number" id="gross-income" placeholder="60000">
+                <input type="number" id="gross-income" name="gross-income">
             </div>
             <div class="input-group">
                 <label for="period">Period</label>
@@ -22,17 +21,6 @@
                     <option value="year">Year</option>
                     <option value="month">Month</option>
                 </select>
-            </div>
-            <div class="results">
-                <h2>Calculations for 2024</h2>
-                <div class="result-item">
-                    <span>Taxable Income</span>
-                    <span>€60,000.00</span>
-                </div>
-                <div class="result-item">
-                    <span>Month Net Income</span>
-                    <span>€3,589.53</span>
-                </div>
             </div>
         </div>
     </main>
